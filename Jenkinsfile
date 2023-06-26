@@ -9,7 +9,7 @@ pipeline {
 
 stage ('Run docker Compose'){
 steps {
-sh 'cd php_project '
+sh 'cd /var/lib/jenkins/workspace/php_project'
 sh 'docker-compose up -d'
 
 }
