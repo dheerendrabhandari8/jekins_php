@@ -7,12 +7,12 @@ pipeline {
            }
 }
 
-// stage ('Run docker Compose'){
-// steps {
-// sh 'cd jen '
-// sh 'docker-compose up -d'
+stage ('Run docker Compose'){
+steps {
+sh 'cd php_project '
+sh 'docker-compose up -d'
 
-// }
-// }
+}
+}
 }
 } 
