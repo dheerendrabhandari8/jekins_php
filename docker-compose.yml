@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile
     image: php:7.4-apache
     container_name: php-container
-    ports:
-      - 81:80
+    # ports:
+    #   - 81:80
     volumes:
       - ./:/var/www/html
     networks: 
