@@ -31,5 +31,9 @@ stage('Login') {
 				sh 'docker push dheerendrabhandari/php-project:latest'
 			}
 		}
+	     stage('k8s') {
+
+			steps {
+   kubernetesDeploy configs: 'kubernetes-menifest.yml', kubeConfig: [path: ''], kubeconfigId: 'k8s-conf', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
     }
 } 
