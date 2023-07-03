@@ -34,8 +34,10 @@ stage('Login') {
 	     stage('k8s') {
 
 			steps {
-   kubernetesDeploy configs: 'kubernetes-menifest.yml, kubeconfigId: k8s-conf'
-    }
+   kubernetesDeploy configs: 'kubernetes-menifest.yml', 
+		    kubeconfigId: 'k8s-conf',
+                    enableConfigSubstitution: true
+			}
 } 
     }
 }
