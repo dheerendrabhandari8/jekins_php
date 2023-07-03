@@ -37,3 +37,5 @@ stage('Login') {
    kubernetesDeploy configs: 'kubernetes-menifest.yml', kubeConfig: [path: ''], kubeconfigId: 'k8s-conf', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
     }
 } 
+    }
+}
