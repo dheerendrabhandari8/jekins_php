@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    environment {
+		DOCKERHUB_CREDENTIALS=credentials('docker_hub-php')
+	}
     stages {
         stage('** CLONING CODE  **') {
             steps {
@@ -14,5 +18,17 @@ sh 'docker-compose up -d'
 
 }
 }
-}
+stage('Login') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+    stage('Push') {
+
+			steps {
+				sh 'docker push dheerendrabhandari/php-project:latest'
+			}
+		}
+    }
 } 
