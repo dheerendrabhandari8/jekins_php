@@ -1,13 +1,14 @@
-FROM php:8.0-apache
+FROM: 
+# FROM php:8.0-apache
 
-# Set working directory
-WORKDIR /var/www/html
+# # Set working directory
+# WORKDIR /var/www/html
 
-# Copy application code to the container
-COPY . .
+# # Copy application code to the container
+# COPY . .
 
-# Expose port
-EXPOSE 80
+# # Expose port
+# EXPOSE 80
 
-# Start Apache server
-CMD ["apache2-foreground"]
+# # Start Apache server
+# CMD ["apache2-foreground"]
