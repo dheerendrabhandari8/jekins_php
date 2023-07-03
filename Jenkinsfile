@@ -24,11 +24,12 @@ stage('Login') {
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
 		}
-  //   stage('Push') {
+    stage('Push') {
 
-		// 	steps {
-		// 		sh 'docker push dheerendrabhandari/php-project1:latest'
-		// 	}
-		// }
+			steps {
+				sh 'cd /var/lib/jenkins/workspace/php_project'
+				sh 'docker push dheerendrabhandari/php-project1:latest'
+			}
+		}
     }
 } 
