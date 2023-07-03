@@ -14,7 +14,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: php_container
+      - name: php-container
         image: dheerendrabhandari/php-project
         ports:
         - containerPort: 80
