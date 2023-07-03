@@ -12,7 +12,7 @@ spec:
         app: php-app
     spec:
       containers:
-        - name: php-app
+        - name: php-container
           image: dheerendrabhandari/php-project:latest
           ports:
             - containerPort: 81
