@@ -27,7 +27,7 @@ stage('Login') {
     stage('Push') {
 
 			steps {
-				sh 'docker push dheerendrabhandari/php-project'
+				sh 'docker push dheerendrabhandari/php-project1:latest'
 			}
 		}
     }
