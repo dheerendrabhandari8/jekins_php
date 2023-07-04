@@ -15,7 +15,7 @@ stage ('docker build'){
 steps {
 //sh 'cd /var/lib/jenkins/workspace/php_project'
 // sh 'docker-compose up -d'
-sh 'docker build -t dheerendrabhandari/php-project .'
+sh 'docker build -t dheerendrabhandari/php-project:v1 .'
 }
 }
 stage('Login') {
