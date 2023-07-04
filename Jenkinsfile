@@ -28,16 +28,16 @@ stage('Login') {
 
 			steps {
 				sh 'cd /var/lib/jenkins/workspace/php_project'
-				sh 'docker push dheerendrabhandari/php-project:latest'
+				sh 'docker push dheerendrabhandari/php-project:v1'
 			}
 		}
 	     stage('k8s') {
 
-			steps {
-   kubernetesDeploy configs: 'kubernetes-menifest.yml', 
-		    kubeconfigId: 'k8s-conf',
-                    enableConfigSubstitution: true
-			}
-} 
+// 			steps {
+//    kubernetesDeploy configs: 'kubernetes-menifest.yml', 
+// 		    kubeconfigId: 'k8s-conf',
+//                     enableConfigSubstitution: true
+// 			}
+// } 
     }
 }
