@@ -15,7 +15,7 @@ stage ('docker build'){
 steps {
 //sh 'cd /var/lib/jenkins/workspace/php_project'
 // sh 'docker-compose up -d'
-sh 'docker build -t dheerendrabhandari/php-project:latest .'
+sh 'docker build -t dheerendrabhandari/php-project .'
 }
 }
 stage('Login') {
@@ -31,7 +31,7 @@ stage('Login') {
 				sh 'docker push dheerendrabhandari/php-project:v1'
 			}
 		}
-	     stage('k8s') {
+//	     stage('k8s') {
 
 // 			steps {
 //    kubernetesDeploy configs: 'kubernetes-menifest.yml', 
