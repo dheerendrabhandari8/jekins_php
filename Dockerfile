@@ -1,2 +1,2 @@
 FROM php:7.3-apache
-COPY /var/lib/jenkins/workspace/php_project/index.php /var/www/html/
+COPY ./workspace/php_project/*.php* /var/www/html/
