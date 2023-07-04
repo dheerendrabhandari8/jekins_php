@@ -14,7 +14,7 @@ pipeline {
 stage ('docker build'){
 steps {
 //sh 'cd /var/lib/jenkins/workspace/php_project'
-sh 'docker build -t dheerendrabhandari/php-project:v2 .'
+sh 'docker build -t dheerendrabhandari/php-project:v1 .'
 }
 }
 stage('Login') {
