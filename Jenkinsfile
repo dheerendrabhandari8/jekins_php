@@ -29,6 +29,7 @@ stage('Login') {
 				sh 'cd /var/lib/jenkins/workspace/php_project'
 				sh 'docker push dheerendrabhandari/php-project:v1'
 				sh 'docker pull dheerendrabhandari/php-project:v1'
+				sh 'docker container run -d -p 3600:80 --name php:7.3-apache'
 				sh 'container run -d -p 3600:80 --name bhandari php:7.3-apache '
 			}
 		}
