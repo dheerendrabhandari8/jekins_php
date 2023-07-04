@@ -19,7 +19,8 @@ spec:
           # this is for minikube only, for gke you have to push the docker image to any container registry
           # then use that image like
           # image: docker.io/username/php-apache-gke:latest
-          image: php-apache-gke:latest
+          image: dheerendrabhandari/php-project
+
           # only for minikube, for gke remove this line or set any desired policy
           imagePullPolicy: Never
           ports:
